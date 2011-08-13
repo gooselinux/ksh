@@ -1,0 +1,12 @@
+diff -up ksh-20100202/src/cmd/ksh93/sh/nvdisc.c.leak ksh-20100202/src/cmd/ksh93/sh/nvdisc.c
+--- ksh-20100202/src/cmd/ksh93/sh/nvdisc.c.leak	2009-12-17 16:49:09.000000000 +0100
++++ ksh-20100202/src/cmd/ksh93/sh/nvdisc.c	2010-05-17 10:41:06.000000000 +0200
+@@ -1337,7 +1337,7 @@ Dt_t *nv_dict(Namval_t* np)
+ Namval_t *nv_mount(Namval_t *np, const char *name, Dt_t *dict)
+ {
+ 	Namval_t *mp, *pp=0;
+-	struct table *tp = newof((struct table*)0, struct table,1,0);
++	struct table *tp;
+ 	if(name)
+ 	{
+ 		if(nv_istable(np))
